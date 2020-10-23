@@ -38,17 +38,15 @@ export default class Slider extends React.Component {
             <View>
                 <ImageBackground style={{width: 'auto', height: 180 }} source={{uri: item.preview_image}}>
                 </ImageBackground>
-                <Text>{item.url}</Text>
+                {/* <Text>{item.url}</Text> */}
             </View>
         )
     }
 
     render() {
         return (
-          <SafeAreaView style={{paddingTop: 60}} >
-            <View style={{width: 'auto', height: 280}}>
+            <View style={{width: 'auto', height: 200}}>
                 <Carousel
-                  layout={"default"}
                   data={this.state.promotions}
                   sliderWidth={SLIDER_WIDTH}
                   itemWidth={ITEM_WIDTH}
@@ -56,7 +54,6 @@ export default class Slider extends React.Component {
                   onSnapToItem = { index => this.setState({activeIndex:index}) }
                    />
             </View>
-          </SafeAreaView>
         );
     }
 }
